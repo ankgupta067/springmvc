@@ -11,10 +11,17 @@
 <html>
 <head>
     <title>Registration</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+    </style>
 </head>
 <body>
 <h1>Registration</h1>
 <form:form modelAttribute="registration">
+    <form:errors cssClass="error" path="*" element="div"></form:errors>
     <table>
         <tr>
             <td>
@@ -22,6 +29,9 @@
             </td>
             <td>
                 <form:input path="name" />
+            </td>
+            <td>
+                <form:errors cssClass="error" path="name" element="div"></form:errors>
             </td>
         </tr>
         <tr>
